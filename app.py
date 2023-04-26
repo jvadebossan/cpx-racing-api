@@ -20,7 +20,9 @@
 
 from utils.dbconnect import mongoConnect
 from utils.response import res
-from flask import request
+from flask import request, Flask
+
+app = Flask(__name__)
 
 cluster = mongoConnect()
 db = cluster["site"]
