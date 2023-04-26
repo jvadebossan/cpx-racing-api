@@ -11,6 +11,7 @@ infos = db["info"]
 
 @app.route('/api/info', methods=['GET'])
 def info():
+    print('recieved')
     try:
         obj = infos.find_one({'_id':0})
         return res(data=obj, status=200)
